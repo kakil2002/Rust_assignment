@@ -1,0 +1,73 @@
+fn main() {
+    println!("for i32");
+    println!();
+    let num1 = 22;
+    println!("sum:{}", num1.sum());
+    println!("mul:{}", num1.mul());
+    println!("div:{}", num1.div());
+    println!("sub:{}", num1.sub());
+    println!();
+    println!("for f32");
+    println!();
+    let num2=10.2 as f32;
+    println!("sum:{}", num2.sum());
+    println!("mul:{}", num2.mul());
+    println!("div:{}", num2.div());
+    println!("sub:{}", num2.sub());
+    println!();
+    println!("for f64");
+    println!();
+    let num3: f64 = 24.8;
+    println!("sum:{}", num3.sum());
+    println!("mul:{}", num3.mul());
+    println!("div:{}", num3.div());
+    println!("sub:{}", num3.sub());
+} 
+trait Calculator {
+    fn sum(&self) -> Self;
+    fn sub(&self) -> Self;
+    fn mul(&self) -> Self;
+    fn div(&self) -> Self;
+}
+impl Calculator for i32 {
+    fn sum(&self) -> i32 {
+        return self + self;
+    }
+    fn mul(&self) -> i32 {
+        return self * self;
+    }
+    fn div(&self) -> i32 {
+        return self / self;
+    }
+    fn sub(&self) -> i32 {
+        return self - self;
+    }
+}
+impl Calculator for f32 {
+    fn sum(&self) -> f32 {
+        return self + self;
+    }
+    fn mul(&self) -> f32 {
+        return self * self;
+    }
+    fn div(&self) -> f32 {
+        return self / self;
+    }
+    fn sub(&self) -> f32 {
+        return self - self;
+    }
+}
+impl Calculator for f64 {
+    fn sum(&self) -> f64 {
+        return self + self;
+    }
+    fn mul(&self) -> f64 {
+        return self * self;
+    }
+    fn div(&self) -> f64 {
+        return self / self;
+    }
+    fn sub(&self) -> f64 {
+        return self - self;
+    }
+}
